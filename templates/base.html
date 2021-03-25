@@ -15,7 +15,7 @@
     <title>Task Manager</title>
 </head>
 
-	<header>
+<header>
         <!-- top navbar -->
 		<nav class="nav-extended text-shadow light-blue darken-1">
 			<div class="nav-wrapper">
@@ -27,7 +27,7 @@
 					<li><a href="#">New Task</a></li>
 					<li><a href="#">Manage Categories</a></li>
 					<li><a href="#">Log Out</a></li>
-					<li><a href="#">Log In</a></li>
+					<li><a href="{{ url_for('login') }}">Log In</a></li>
 					<li><a href="{{ url_for('register') }}">Register</a></li>
 				</ul>
 			</div>
@@ -41,10 +41,10 @@
             <li><a href="#">New Task</a></li>
             <li><a href="#">Manage Categories</a></li>
             <li><a href="#">Log Out</a></li>
-            <li><a href="#">Log In</a></li>
+            <li><a href="{{ url_for('login') }}">Log In</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
 		</ul>
-    </header>
+	</header>
     
         <section>
         <!-- flash messages -->
@@ -58,7 +58,7 @@
             {% endif %}
         {% endwith %}
     </section>
-    
+
 <body>
 
     {% block content %}
